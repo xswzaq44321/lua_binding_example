@@ -4,7 +4,8 @@
 using namespace std;
 
 int main(){
-	LuaScript script("Player.lua");
+	LuaScript script("player.lua");
 	float posX = script.get<float>("player.position.x");
-	cout << posX;
+	float posY = script.get<float>("player.position.y");
+	cout << "posX, posY = " << posX << "," << posY;
 }
