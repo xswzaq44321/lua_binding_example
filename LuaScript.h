@@ -16,6 +16,8 @@ class LuaScript{
 		LuaScript(const std::string& filename);
 		~LuaScript();
 		void printError(const std::string &variableName, const std::string& reason);
+		std::vector<int> getIntVector(const std::string& name);
+		std::vector<std::string> getTableKeys(const std::string& name);
 
 		void clean(){
 			int n = lua_gettop(L);
